@@ -1,3 +1,3 @@
-![davep.svg][//]
+![//][davep.svg]
 
 [//]: # (README.md ends here)
