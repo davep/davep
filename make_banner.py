@@ -46,21 +46,14 @@ class GitHubBannerApp(App[None]):
     }
     """
 
-    BINDINGS = [
-        ("space", "screenshot"),
-    ]
-
     def compose(self) -> ComposeResult:
         yield Label(NAME, classes="banner")
         yield Label(PRATTLE)
         yield Label("github.com/davep login: _")
 
-    def action_screenshot(self) -> None:
-        self.save_screenshot("davep.svg")
-
 async def make_banner() -> None:
     async with GitHubBannerApp().run_test() as pilot:
-        await pilot.press("space")
+        pilot.app.save_screenshot("davep.svg")
 
 if __name__ == "__main__":
     asyncio.run(make_banner())
