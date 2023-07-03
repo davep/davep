@@ -52,7 +52,7 @@ class GitHubBannerApp(App[None]):
     def compose(self) -> ComposeResult:
         yield Label(NAME, classes="banner")
         yield Label(PRATTLE)
-        yield Label("github.com/davep login: _")
+        yield Label("github.com/davep login: [reverse] [/]")
 
 async def make_banner() -> None:
     async with GitHubBannerApp().run_test() as pilot:
