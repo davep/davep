@@ -30,13 +30,16 @@ class GitHubBannerApp(App[None]):
     TITLE = "github.com/davep"
 
     CSS = """
+    $crt: #282828;
+    $amber: #ffb000;
+    $green: #33ff00 70%;
+
     Screen {
-        background: #282828;
+        background: $crt;
     }
 
     Label {
-        color: #ffb000;
-        background: #282828;
+        color: $green;
         height: auto;
         width: 1fr;
     }
